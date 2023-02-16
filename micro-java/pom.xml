@@ -119,7 +119,6 @@
       <id>native</id>
       <activation>
 	<property>
-	  <jkube.build.switchToDeployment>true</jkube.build.switchToDeployment> 		
           <name>native</name>
         </property>
       </activation>
