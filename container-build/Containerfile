@@ -9,7 +9,7 @@ LABEL io.k8s.description="A basic apache user ONBUILD" \
       io.k8s.openshift.tags="apache,httpd"
 
 RUN sed -i "s/Listen 80/Listen 8080/g" /etc/httpd/conf/httpd.conf && \
-    sed -i "s/#ServiceName www.example.com/ServiceName 0.0.0.0:8080/g" /etc/httpd/conf/httpd.conf
+    sed -i "s/#ServerName www.example.com/ServerName 0.0.0.0:8080/g" /etc/httpd/conf/httpd.conf
 
 RUN chgrp -R 0 /var/log/httpd /var/run/httpd && \
     chmod -R g=u /var/log/httpd /var/run/httpd 
